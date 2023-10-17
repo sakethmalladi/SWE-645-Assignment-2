@@ -4,7 +4,7 @@ pipeline {
         DOCKERHUB_PASS = credentials('dockerhub')
     }
     stages {
-        stage('') {
+        stage('Stage 1') {
             steps {
                 script {
                     checkout scm
@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage('') {
+        stage('Stage 2') {
             steps {
                 script {
                     sh 'docker push smalladi44/studentsurvey:0.1'
