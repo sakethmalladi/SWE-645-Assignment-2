@@ -4,7 +4,7 @@ pipeline {
         DOCKERHUB_PASS = credentials('dockerhub')
     }
     stages {
-        stage('Building the Student Survey image') {
+        stage() {
             steps {
                 script {
                     checkout scm
@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage('Pushing Image to Dockerhub') {
+        stage() {
             steps {
                 script {
                     sh 'docker push smalladi44/studentsurvey:0.1'
