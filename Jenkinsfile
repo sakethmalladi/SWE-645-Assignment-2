@@ -23,15 +23,5 @@ pipeline {
                 }
             }
         }
-        stage('Deploying to Rancher as single pod') {
-            steps {
-                sh 'kubectl --username=admin --password=saketh1234567 set image deployment/deploy1 contaiiner-0=smalladi44/studentsurvey:0.1 -n jenkins-pipeline'
-            }
-        }
-        stage('Deploying to Rancher as with load balancer') {
-            steps {
-                sh 'kubectl --username=admin --password=saketh1234567 set image deployment/loadbal container-0=smalladi44/studentsurvey:0.1 -n jenkins-pipeline'
-            }
-        }
     }
 }
