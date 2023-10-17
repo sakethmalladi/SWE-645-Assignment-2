@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department Survey</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Define the CSS styles for the heading and box */
+        .header-box {
+            
+            border: 5px solid #006633; /* Green solid border with 5px width */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Box shadow with styling choice */
+            padding: 10px; /* Add padding to create space between text and border */
+            text-align: center; /* Center the text horizontally */
+		color: #006633;
+	    h1 {
+ style="width: 5px; 
+text-align:center;
+color: #006633;
+    }
+        /* Initially hide the message */
+        #message {
+            display: none;
+        }
+
+        /* Style the message element */
+        #message.show {
+            display: block;
+            color: green;
+            font-weight: bold;
+        }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="header-box">CS Department Survey</h1>
+        </div>
+    </header>
+    <div class="container">
+        <p>We value your feedback. Please take a moment to fill out this survey.</p>
+        <form action="submitted.html" method="get" autocomplete="on">
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Username<span class="required">*</span>:</label>
+                <input type="text" id="username" name="username" class="form-control" required placeholder="netid" autofocus>
+            </div>
+            <!-- Address -->
+            <div class="form-group">
+                <label for="street">Street Address<span class="required">*</span>:</label>
+                <input type="text" id="street" name="street" class="form-control" required placeholder="your address">
+            </div>
+            <!-- City -->
+            <div class="form-group">
+                <label for="city">City<span class="required">*</span>:</label>
+                <input type="text" id="city" name="city" class="form-control" required placeholder="Fairfax">
+            </div>
+            <!-- State -->
+            <div class="form-group">
+                <label for="state">State<span class="required">*</span>:</label>
+                <input type="text" id="state" name="state" class="form-control" required placeholder="VA">
+            </div>
+            <!-- ZIP -->
+            <div class="form-group">
+                <label for="zip">ZIP<span class="required">*</span>:</label>
+                <input type="text" id="zip" name="zip" class="form-control" required placeholder="22030">
+            </div>
+            <!-- Telephone Number -->
+            <div class="form-group">
+                <label for="phone">Telephone Number<span class="required">*</span>:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="1234567890">
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email<span class="required">*</span>:</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="netid@gmu.edu">
+            </div>
+            <!-- Website URL -->
+            <div class="form-group">
+                <label for="url">Website URL<span class="required">*</span>:</label>
+                <input type="url" id="url" name="url" class="form-control" required placeholder="https://linkedin.com/name">
+            </div>
+            <!-- Date of Survey -->
+            <div class="form-group">
+                <label for="surveyDate">Date of Survey<span class="required">*</span>:</label>
+                <input type="date" id="surveyDate" name="surveyDate" class="form-control" required placeholder="mm-dd-yy">
+            </div>
+            <!-- Liked Most Checkboxes -->
+            <div class="form-group">
+                <label for="likes">What did you like most about the campus?<span class="required">*</span>:</label><br>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="likes" value="Students" id="studentsCheckbox">
+                    <label class="form-check-label" for="studentsCheckbox">Students</label><br>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="likes" value="Location" id="locationCheckbox">
+                    <label class="form-check-label" for="locationCheckbox">Location</label><br>
+                </div>
+<div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="likes" value="campus" id="campusCheckbox">
+                    <label class="form-check-label" for="campusCheckbox">Campus</label><br>
+                </div>
+<div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="likes" value="atmosphere" id="atmosphereCheckbox">
+                    <label class="form-check-label" for="atmosphereCheckbox">Atmosphere</label><br>
+                </div>
+<div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="likes" value="dorm" id="dormCheckbox">
+                    <label class="form-check-label" for="dormCheckbox">Dorm Rooms</label><br>
+                </div>
+<div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="likes" value="sport" id="sportCheckbox">
+                    <label class="form-check-label" for="sportCheckbox">Sports</label><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="interest">How did you become interested in the university?<span class="required">*</span>:</label><br>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="interest" value="Friends" id="friendsRadio">
+                    <label class="form-check-label" for="friendsRadio">Friends</label><br>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="interest" value="Television" id="televisionRadio">
+                    <label class="form-check-label" for="televisionRadio">Television</label><br>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="interest" value="internet" id="internetRadio">
+                    <label class="form-check-label" for="Radio">Internet</label><br>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="interest" value="other" id="otherRadio">
+                    <label class="form-check-label" for="otherRadio">Other</label><br>
+                </div>
+                <!-- Add more radio buttons as needed -->
+            </div>
+            <!-- Additional Comments -->
+            <div class="form-group">
+                <label for="comments">Additional Comments<span class="required">*</span>:</label>
+                <textarea id="comments" name="comments" class="form-control" placeholder="Your Comments"></textarea>
+            </div>
+            <!-- High School Graduation Date -->
+            <div class="form-group">
+                <label for="gradMonth">High School Graduation Month<span class="required">*</span>:</label>
+                <input type="text" id="gradMonth" name="gradMonth" list="months" class="form-control" required>
+                <datalist id="months">
+                    <option value="January">
+                    <option value="February">
+<option value="March">
+<option value="April">
+<option value="May">
+<option value="June">
+<option value="July">
+<option value="August">
+<option value="September">
+<option value="October">
+<option value="November">
+<option value="December">
+                </datalist>
+            </div>
+            <!-- Raffle -->
+<div class="form-group">
+    <label for="raffle">Raffle (Enter at least ten comma-separated numbers from 1 through 100)<span class="required">*</span>:</label>
+    <input type="text" id="raffle" name="raffle" class="form-control" required placeholder="e.g., 5, 23, 42, 67, 88, ...">
+</div>
+
+            <div class="form-group">
+                <label for="gradYear">High School Graduation Year<span class="required">*</span>:</label>
+                <input type="text" id="gradYear" name="gradYear" class="form-control" required placeholder="yyyy">
+            </div>
+            <!-- Likelihood of Recommendation Dropdown -->
+            <div class="form-group">
+                <label for="recommendation">Likelihood of Recommendation<span class="required">*</span>:</label>
+                <select id="recommendation" name="recommendation" class="form-control">
+                    <option value="Very Likely">Very Likely</option>
+                    <option value="Likely">Likely</option>
+                    <option value="Unlikely">Unlikely</option>
+                </select>
+            </div>
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button id="myb" type="submit" style="background-color: #FFCC33;">Submit</button>
+            </div>
+        </br>            <!-- Cancel Button -->
+<div class="text-center">
+    <button type="reset" style="background-color: #FF0000;">Cancel</button>
+</div>
+
+</br>
+
+            <!-- Footer with a link to the Introduction Page -->
+            <p>Please visit the <a href="https://645bucket.s3.amazonaws.com/index.html
+                " class="text-black">Saketh Malladi's Introduction Page</a>.</p>
+        </div>
+        </form>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
