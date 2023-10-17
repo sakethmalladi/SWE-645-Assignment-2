@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department Information</title>
+    <!-- Include Bootstrap CSS from a CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Define custom CSS styles */
+        .custom-style {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .header-box {
+            border: 5px solid #006633; /* Green solid border with 5px width */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Box shadow with styling choice */
+            padding: 10px; /* Add padding to create space between text and border */
+            text-align: center; /* Center the text horizontally */
+            color: #006633; /* Text color */
+        }
+
+        /* Define styles for h1 within .header-box */
+        .header-box h1 {
+            /* Custom styles for h1 */
+            width: 5px; /* Width of h1 */
+            text-align: center; /* Center-align h1 */
+            color: #006633; /* Text color for h1 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <!-- Header with a green border and shadow -->
+            <h1 class="header-box">Computer Science Department</h1>
+        </div>
+    </header>
+
+    <section id="department-description" class="py-5">
+        <div class="container">
+            <h2>About the Department</h2>
+            <!-- Custom-styled paragraph describing the department -->
+            <p class="custom-style">The Computer Science Department at George Mason University offers a wide range of programs and research opportunities for students interested in computer science and related fields. Our dedicated faculty and state-of-the-art facilities provide an excellent environment for learning and research.</p>
+        </div>
+    </section>
+
+    <section id="ms-degrees" class="py-5">
+        <div class="container">
+            <h2>Master's Degrees</h2>
+            <ul>
+                <!-- List of master's degrees with custom styling -->
+                <li class="custom-style">Master of Science in Computer Science</li>
+                <li class="custom-style">Master of Science in Cybersecurity</li>
+                <li class="custom-style">Master of Science in Data Science</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="required-courses" class="py-5">
+        <div class="container">
+            <h2>Required Courses</h2>
+            <!-- Table of required courses with Bootstrap table styles -->
+            <table class="table table-bordered">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>Course Number</th>
+                        <th>Course Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CS 101</td>
+                        <td>Introduction to Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td>CS 202</td>
+                        <td>Data Structures and Algorithms</td>
+                    </tr>
+                    <tr>
+                        <td>CS 303</td>
+                        <td>Database Management Systems</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="bg-color text-black text-center py-3" style="background-color: #FFCC33;">
+        <div class="container">
+            <!-- Footer with a link to the CS Department Survey Page -->
+            <p>Please visit the <a href="survey.html" class="text-black">CS Department Survey Page</a>.</p>
+        </div>
+	<div>
+            <!-- Footer with a link to the Introduction Page -->
+            <p>Please visit the <a href="index.html" class="text-black">Saketh Malladi's Introduction Page</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
