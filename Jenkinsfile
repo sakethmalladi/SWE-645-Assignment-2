@@ -19,7 +19,7 @@ pipeline {
         stage('Pushing Image to Dockerhub') {
             steps {
                 script {
-                    sh 'docker push smalladi44/ssurvey645:tag}'
+                    sh 'docker push smalladi44/ssurvey645:tag'
                 }
             }
         }
